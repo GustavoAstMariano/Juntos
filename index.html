@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz Dia dos Namorados ❤️</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    body>*:not(.btn-container) {
+      display: none;
+    }
+
+    body.show-content>*:not(.btn-container) {
+      display: block;
+    }
+
+    body {
+      background-color: #000000;
+      /* fundo preto puro */
+      color: #d1b3ff;
+      /* roxo clarinho para o texto principal */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1.title {
+      text-shadow: 0 0 8px #800080;
+    }
+
+    .swiper {
+      box-shadow: 0 0 100px #800080cc !important;
+      /* mantém sombra roxa */
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 0 10px 2px #9b30ff;
+        transform: scale(1);
+      }
+
+      50% {
+        box-shadow: 0 0 20px 6px #d18fff;
+        transform: scale(1.05);
+      }
+    }
+
+    #btnSurpresa {
+      animation-name: pulse;
+      animation-duration: 2.5s;
+      animation-iteration-count: infinite;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #btnSurpresa:hover {
+      background-color: #9b30ff;
+      box-shadow: 0 0 25px 8px #d18fff;
+    }
+
+    @keyframes pulse-double {
+
+      0%,
+      100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 3px #FF4500);
+      }
+
+      50% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 8px #FF4500);
+      }
+    }
+
+    .gift-icon {
+      animation: pulse-double 2.5s infinite;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: #9b30ff;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #9b30ff;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 class="title" data-aos="fade-down">Feliz Dia dos Namorados ❤️</h1>
+  </header>
+  <div style="width: max-content;"
+    class="btn-container fixed bottom-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+    <button id="btnSurpresa" aria-label="Abrir Surpresa"
+      class="flex items-center px-8 py-4 rounded-full font-bold text-white bg-purple-800 hover:bg-purple-700 shadow-lg transition">
+      <svg width="40px" height="40px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+        xmlns="http://www.w3.org/2000/svg" fill="#000000">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M884.4 389v101.6c0 16-13 29-29 29H570.2V360h285.1c16.1 0 29.1 13 29.1 29z" fill="#FE97AC"></path>
+          <path d="M793.6 731.9l-9 8.7 2.2 12.2-11-5.9-11 5.9 2.2-12.2-9-8.7 12.4-1.8 5.4-11.1 5.5 11.1z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M578.2 756.8l15.1 14.7-3.6 20.8 18.7-9.8 18.7 9.8-3.5-20.8 15.1-14.7-20.9-3-9.4-18.9-9.3 18.9-20.9 3z m151.5 130l-3.6-20.8 15.1-14.7-20.9-3-9.3-18.9-9.4 18.9-20.9 3 15.1 14.7-3.5 20.8 18.7-9.9 18.7 9.9z m26.7-345.9l-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8 18.7-9.9 18.7 9.9-3.5-20.8 15.1-14.7-20.9-3-9.4-18.9zM806 727.8l-20.9-3-9.3-18.9-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8 18.7-9.8 18.7 9.8-3.6-20.8 15.1-14.7zM570.2 531.3h260v345.5c0 16-13 29-29 29h-231V531.3z m110.9 136.8l15.2-14.7-20.9-3-9.4-18.9-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8L666 679l18.7 9.9-3.6-20.8z"
+            fill="#DC0C55"></path>
+          <path
+            d="M683 194.9c42.3 0 76.8 34.5 76.8 76.8 0 42.4-34.5 76.8-76.8 76.8H525.1l51.9-78.6c37.6-51.9 61.9-75 106-75z"
+            fill="#FAF7A6"></path>
+          <path
+            d="M806 727.8l-15.1 14.7 3.6 20.8-18.7-9.8-18.7 9.8 3.6-20.8-15.1-14.7 20.9-3 9.3-18.9 9.3 18.9 20.9 3z m-21.4 12.8l8.9-8.7-12.3-1.7-5.5-11.1-5.5 11.1-12.3 1.7 8.9 8.7-2.2 12.2 11-5.8 11 5.8-2-12.2z"
+            fill="#EF4668"></path>
+          <path d="M751 565.1l5.4-11 5.6 11 12.2 1.9-8.8 8.5 2.1 12.2-11.1-5.7-10.9 5.7 2.1-12.2-8.9-8.5z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M771.6 577.6l3.5 20.8-18.7-9.9-18.7 9.9 3.6-20.8-15.1-14.7 20.9-3 9.3-18.9 9.4 18.9 20.9 3-15.1 14.7z m-15.2-23.5l-5.5 11-12.3 1.9 8.9 8.6-2.1 12.2 10.9-5.7 11 5.7-2.1-12.2 8.8-8.6-12.2-1.9-5.4-11z"
+            fill="#EF4668"></path>
+          <path d="M719.8 863.9l2.1 12.2-10.9-5.7-11 5.7 2.1-12.2-8.9-8.6 12.2-1.9 5.6-11.1 5.5 11.1 12.3 1.9z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M726.1 866l3.6 20.8-18.7-9.9-18.7 9.9 3.5-20.8-15.1-14.7 20.9-3 9.4-18.9 9.3 18.9 20.9 3-15.1 14.7z m-4.2 10.1l-2.1-12.2 8.9-8.6-12.3-1.9-5.5-11.1-5.6 11.1-12.2 1.9 8.8 8.6-2.1 12.2 11-5.7 11.1 5.7z"
+            fill="#EF4668"></path>
+          <path d="M674.9 666l2.1 12.3-11-5.8-11 5.8 2.1-12.3-8.9-8.6 12.3-1.8 5.5-11.1 5.4 11.1 12.3 1.8z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M666 631.4l9.4 18.9 20.9 3-15.2 14.7 3.6 20.8L666 679l-18.7 9.9 3.6-20.8-15.1-14.7 20.9-3 9.3-19z m11 46.9l-2.1-12.3 8.8-8.6-12.3-1.9-5.5-11-5.5 11-12.3 1.9 8.9 8.6-2.1 12.3 10.9-5.8 11.2 5.8z"
+            fill="#EF4668"></path>
+          <path d="M613.9 759.1l12.2 1.8-8.8 8.7 2.1 12.2-11-5.8-11 5.8 2.1-12.2-8.9-8.7 12.3-1.8 5.5-11.1z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M613.9 759.1l-5.6-11.1-5.5 11.1-12.3 1.7 8.9 8.7-2.1 12.2 10.9-5.8 11 5.8-2.1-12.2 8.8-8.7-12-1.7z m9.7 12.5l3.5 20.8-18.7-9.8-18.7 9.8 3.6-20.8-15.1-14.7 20.9-3 9.3-18.9 9.4 18.9 20.9 3-15.1 14.7z"
+            fill="#EF4668"></path>
+          <path
+            d="M570.3 143.4c21.9 38.1 18.5 76.5-11.4 128.3l-45.8 67.7-77.7-115.3c-10.1-17.4-12.5-39.4-6.7-60.2 5.7-20.8 19.2-38.4 36.7-48.7 11.8-6.7 25-10.3 38.2-10.3 6.7 0 13.5 0.9 20.1 2.7 19.7 5.4 36.4 18.1 46.6 35.8zM558.5 591.3v314.5h-91.9V360H513l0.1 0.1 0.2-0.1h45.2V531.3zM451.4 269.6l52.1 78.8H345.6c-42.4 0-76.8-34.4-76.8-76.8 0-42.3 34.4-76.8 76.8-76.8 44 0.1 68.2 23.2 105.8 74.8z"
+            fill="#FAF7A6"></path>
+          <path d="M455 360v159.7H173.1c-16 0-29-13-29-29V389c0-16 13-29 29-29H455z" fill="#FE97AC"></path>
+          <path d="M418 760.9l-8.8 8.7 2.1 12.2-11-5.8-11 5.8 2.1-12.2-8.9-8.7 12.3-1.8 5.5-11.1 5.5 11.1z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M409.7 753.8l20.9 3-15.1 14.7 3.5 20.8-18.7-9.8-18.7 9.8 3.6-20.8-15.1-14.7 20.9-3 9.3-18.9 9.4 18.9z m-0.5 15.8l8.8-8.7-12.2-1.7-5.6-11.1-5.5 11.1-12.3 1.7 8.9 8.7-2.1 12.2 10.9-5.8 11 5.8-1.9-12.2z"
+            fill="#EF4668"></path>
+          <path d="M351.6 666l2.1 12.3-10.9-5.8-11.1 5.8 2.1-12.3-8.8-8.6 12.2-1.8 5.6-11.1 5.4 11.1 12.2 1.8z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M352.1 650.3l20.9 3-15.1 14.7 3.5 20.8-18.6-9.9-18.7 9.9 3.5-20.8-15.1-14.7 20.9-3 9.4-18.9 9.3 18.9z m1.6 28l-2.1-12.3 8.8-8.6-12.2-1.9-5.5-11-5.6 11-12.2 1.9 8.8 8.6-2.1 12.3 11-5.8 11.1 5.8z"
+            fill="#EF4668"></path>
+          <path d="M315.5 855.3l-9 8.6 2.3 12.2-11.1-5.7-11 5.7 2.2-12.2-8.9-8.6 12.3-1.9 5.4-11.1 5.5 11.1z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M297.7 829.3l9.3 18.9 20.9 3-15.1 14.8 3.6 20.8-18.7-9.9-18.7 9.9 3.6-20.8-15.1-14.7 20.9-3 9.3-19z m5.5 24.1l-5.5-11.1-5.5 11.1-12.3 1.9 8.9 8.6-2.2 12.2 11-5.7 11 5.7-2.2-12.2 8.9-8.6-12.1-1.9z"
+            fill="#EF4668"></path>
+          <path d="M234.4 567l12.3-1.9 5.5-11 5.6 11L270 567l-8.9 8.5 2.1 12.2-11-5.7-10.9 5.7 2.1-12.2z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M246.7 565.1l-12.3 1.9 8.9 8.6-2.1 12.2 10.9-5.7 11 5.7-2.1-12.2 8.8-8.6-12.2-1.9-5.6-11-5.3 11z m-9.6 12.5L222 562.9l20.9-3 9.3-18.9 9.4 18.9 20.9 3-15.1 14.7 3.5 20.8-18.7-9.9-18.7 9.9 3.6-20.8z"
+            fill="#EF4668"></path>
+          <path d="M232.9 746.9l-11 5.9 2.1-12.2-8.8-8.7 12.2-1.8 5.5-11.1 5.5 11.1 12.3 1.8-8.9 8.7 2 12.2z"
+            fill="#EBBE3E"></path>
+          <path
+            d="M316.4 886.8l-3.6-20.8 15.1-14.7-20.9-3-9.3-18.9-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8 18.7-9.9 18.7 9.9z m7.7-197.9l18.7-9.9 18.6 9.9-3.5-20.8 15.1-14.7-20.9-3-9.3-18.9-9.4 18.9-20.9 3 15.1 14.7-3.5 20.8z m106.5 67.9l-20.9-3-9.4-18.9-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8 18.7-9.8 18.7 9.8-3.5-20.8 15.1-14.7z m-232.3 120V531.3H455v374.5H227.4c-16.1 0-29.1-13-29.1-29z m15.9-113.5l18.7-9.8 18.7 9.8-3.6-20.8 15.1-14.7-20.9-3-9.3-18.9-9.4 18.9-20.9 3 15.1 14.7-3.5 20.8z m19.3-164.9l18.7-9.9 18.7 9.9-3.5-20.8 15.1-14.7-20.9-3-9.4-18.9-9.3 18.9-20.9 3 15.1 14.7-3.6 20.8z"
+            fill="#DC0C55"></path>
+          <path
+            d="M238.4 730.1l-5.5-11.1-5.6 11.1-12.2 1.7 8.8 8.7-2.1 12.2 11-5.8 10.9 5.8-2.1-12.2 8.9-8.7-12.1-1.7z m-14.9-5.3l9.4-18.9 9.3 18.9 20.9 3-15.1 14.7 3.6 20.8-18.7-9.8-18.7 9.8 3.5-20.8-15.1-14.7 20.9-3z"
+            fill="#EF4668"></path>
+          <path
+            d="M345.6 348.4h157.9l-52.1-78.8c-37.5-51.6-61.8-74.7-105.8-74.7-42.4 0-76.8 34.5-76.8 76.8s34.4 76.7 76.8 76.7z m213.3-76.6c29.8-51.8 33.3-90.2 11.4-128.3-10.2-17.8-26.8-30.4-46.6-35.8-6.6-1.7-13.4-2.7-20.1-2.7-13.2 0-26.4 3.6-38.2 10.3-17.5 10.2-31 27.9-36.7 48.7-5.8 20.8-3.4 42.7 6.7 60.2l77.7 115.3 45.8-67.7z m-0.4 259.5V360h-45.2l-0.1 0.1-0.2-0.1h-46.4v545.8h92V531.3zM198.3 876.8c0 16 13 29 29 29H455V531.3H198.3v345.5z m-25.2-357.1H455V360H173.1c-16 0-29 13-29 29v101.6c0 16.1 13 29.1 29 29.1zM683 348.4c42.3 0 76.8-34.4 76.8-76.8 0-42.3-34.5-76.8-76.8-76.8-44.1 0-68.4 23.1-106 74.9l-51.9 78.6H683z m118.1 557.4c16 0 29-13 29-29V531.3h-260v374.5h231z m40.7-374.5v345.5c0 22.4-18.2 40.6-40.6 40.6H227.4c-22.4 0-40.6-18.2-40.6-40.6V531.3h-13.6c-22.4 0-40.6-18.2-40.6-40.6V389c0-22.4 18.2-40.6 40.6-40.6H302c-26.7-15.2-44.7-43.9-44.7-76.8 0-48.7 39.6-88.4 88.4-88.4 29.7 0 51.1 9.1 72.1 28.5-4.8-16.1-4.9-33.9-0.2-50.9 6.6-23.7 21.9-43.9 42.2-55.5 20.4-11.8 44.2-15 67-8.8 22.9 6 41.9 20.7 53.7 41.1 17.7 30.5 20.3 62 7.9 98.5 29.7-36.3 54.6-52.8 94.9-52.8 48.7 0 88.4 39.7 88.4 88.4 0 32.9-18.1 61.5-44.8 76.8h128.8c22.4 0 40.6 18.2 40.6 40.6v101.6c0 22.4-18.2 40.6-40.6 40.6h-13.9z m13.6-11.6c16 0 29-13 29-29V389c0-16-13-29-29-29H570.2v159.7h285.2z"
+            fill="#EF4668"></path>
+        </g>
+      </svg>
+      <span class="ml-3">Abrir Surpresa</span>
+    </button>
+  </div>
+  <main id="content" class="container mx-auto px-4 max-w-3xl show-content">
+    <section class="swiper rounded-2xl" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="imagens/foto1.png" class="rounded-2xl" alt="Foto 1" /></div>
+        <div class="swiper-slide"><img src="imagens/foto2.png" class="rounded-2xl" alt="Foto 2" /></div>
+        <div class="swiper-slide"><img src="imagens/foto3.png" class="rounded-2xl" alt="Foto 3" /></div>
+        <div class="swiper-slide"><img src="imagens/foto4.png" class="rounded-2xl" alt="Foto 4" /></div>
+        <div class="swiper-slide"><img src="imagens/foto5.png" class="rounded-2xl" alt="Foto 5" /></div>
+        <div class="swiper-slide"><img src="imagens/foto6.png" class="rounded-2xl" alt="Foto 6" /></div>
+        <div class="swiper-slide"><img src="imagens/foto7.png" class="rounded-2xl" alt="Foto 7" /></div>
+        <div class="swiper-slide"><img src="imagens/foto8.png" class="rounded-2xl" alt="Foto 8" /></div>
+        <div class="swiper-slide"><img src="imagens/foto9.png" class="rounded-2xl" alt="Foto 9" /></div>
+        <div class="swiper-slide"><img src="imagens/foto10.png" class="rounded-2xl" alt="Foto 10" /></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </section>
+    <!-- Texto Typed.js -->
+    <section class="w-full flex items-center pt-2 justify-center min-h-[10vh] text-center px-4" data-aos="fade-up">
+      <p tabindex="0" class="text-3xl md:text-5xl font-semibold text-purple-700">
+        Eu te <span id="typed" class="border-b-4 border-purple-300"></span>.
+      </p>
+    </section>
+
+
+    <!-- Contador -->
+    <div class="about-info container mx-auto p-4 my-32 transition-all duration-1000 ease-in-out" data-aos="fade-up"
+      data-aos-delay="600" style="max-width:600px;">
+      <h1 class="title mb-6 text-2xl font-bold text-center">Juntos desde 18/07/2020</h1>
+
+      <div id="contadorCards" class="grid grid-cols-3 gap-4">
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="anos" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Anos</span>
+        </div>
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="meses" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Meses</span>
+        </div>
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="dias" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Dias</span>
+        </div>
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="horas" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Horas</span>
+        </div>
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="minutos" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Minutos</span>
+        </div>
+        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+          <span id="segundos" class="text-4xl font-extrabold">0</span>
+          <span class="text-sm uppercase mt-1">Segundos</span>
+        </div>
+      </div>
+
+      <h1 class="p-4 title mt-2 text-2xl font-bold text-center">Isso Equivale à</h1>
+      <div class=" card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <span id="contadorExtra" class="text-2xl font-semibold">0</span>
+        <div class="buttons mt-4 space-x-4">
+          <button onclick="alternarModo(-1)"
+            class="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition">◀</button>
+          <button onclick="alternarModo(1)"
+            class="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition">▶</button>
+        </div>
+      </div>
+    </div>
+    <div class="my-32" data-aos="fade-up" data-aos-delay="600">
+      <h1 class="p-4 title mt-2 text-2xl font-bold text-center">A nossa Música:</h1>
+      <div style="justify-self: center;">
+        <iframe width="300" height="180" src="https://www.youtube.com/embed/iZq0u3quAqo?si=TyM5X_qFlSOM0LTb"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Inicializar Swiper
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+    // Inicializar AOS
+    AOS.init();
+
+    // Inicializar Typed.js
+    new Typed("#typed", {
+      strings: [
+        "Amo",
+        "Adoro",
+        "Admiro",
+        "Quero",
+        "Protejo",
+        "Cuido",
+        "Respeito",
+        "Apoio",
+        "Mimo",
+        "Idolatro",
+      ],
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 700,
+      loop: true,
+    });
+
+    // Contador
+    const dataInicio = new Date('2020-07-18T20:30:00');
+    const modos = ['dias', 'minutos', 'segundos'];
+    let modoAtual = 0;
+    let ultimaMensagem = '';
+    let ultimoSegundo = -1;
+
+    function atualizarContador(ms) {
+      const segundos = Math.floor(ms / 1000) % 60;
+      const minutos = Math.floor(ms / (1000 * 60)) % 60;
+      const horas = Math.floor(ms / (1000 * 60 * 60)) % 24;
+      const dias = Math.floor(ms / (1000 * 60 * 60 * 24)) % 30;
+      const meses = Math.floor(ms / (1000 * 60 * 60 * 24 * 30)) % 12;
+      const anos = Math.floor(ms / (1000 * 60 * 60 * 24 * 365));
+
+      document.getElementById('anos').textContent = anos;
+      document.getElementById('meses').textContent = meses;
+      document.getElementById('dias').textContent = dias;
+      document.getElementById('horas').textContent = horas;
+      document.getElementById('minutos').textContent = minutos;
+      document.getElementById('segundos').textContent = segundos;
+    }
+
+
+    function formatarExtra(ms) {
+      switch (modos[modoAtual]) {
+        case 'dias':
+          return `${Math.floor(ms / (1000 * 60 * 60 * 24)).toLocaleString('pt-BR')} Dias`;
+        case 'minutos':
+          return `${Math.floor(ms / (1000 * 60)).toLocaleString('pt-BR')} Minutos`;
+        case 'segundos':
+          return `${Math.floor(ms / 1000).toLocaleString('pt-BR')} Segundos`;
+      }
+    }
+
+    function atualizarContadores() {
+      const agora = new Date();
+      const diff = agora - dataInicio;
+
+      if (diff <= 0) {
+        if (ultimaMensagem !== 'Tempo esgotado!') {
+          ultimaMensagem = 'Tempo esgotado!';
+          document.getElementById('contadorPrincipal').textContent = ultimaMensagem;
+          document.getElementById('contadorExtra').textContent = '';
+        }
+        return;
+      }
+      atualizarContador(diff);
+      document.getElementById('contadorExtra').textContent = formatarExtra(diff);
+    }
+
+    function alternarModo(direcao) {
+      modoAtual = (modoAtual + direcao + modos.length) % modos.length;
+      atualizarContadores();
+    }
+
+    function loop() {
+      const agora = new Date();
+      const segundoAtual = agora.getSeconds();
+
+      if (segundoAtual !== ultimoSegundo) {
+        ultimoSegundo = segundoAtual;
+        atualizarContadores();
+      }
+
+      requestAnimationFrame(loop);
+    }
+
+    loop();
+    // Mostrar conteúdo e esconder botão ao clicar
+    document.getElementById('btnSurpresa').addEventListener('click', () => {
+      document.getElementById('content').style.display = 'block';
+      document.querySelector('.btn-container').style.display = 'none';
+    });
+  </script>
+
+</body>
+
+</html>
