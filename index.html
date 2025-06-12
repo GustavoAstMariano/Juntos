@@ -40,6 +40,7 @@
       box-shadow: 0 0 100px #800080cc !important;
       /* mantém sombra roxa */
     }
+
     .border-shadow {
       box-shadow: 0 0 100px #800080cc !important;
     }
@@ -245,6 +246,15 @@
     </button>
   </div>
   <main id="content" class="pt-20 container mx-auto px-4 max-w-3xl show-content">
+    <button id="playButton" style="top: 2%; left: 42%;" class="absolute bg-pink-700 hover:bg-pink-600 text-white p-5 rounded-full shadow-lg transition 
+    animate-pulse focus:outline-none focus:ring-4 focus:ring-pink-300" aria-label="Tocar música">
+      <!-- Ícone de Play -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+        stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M14.752 11.168l-5.197-3.027A1 1 0 008 9.027v5.946a1 1 0 001.555.832l5.197-3.027a1 1 0 000-1.664z" />
+      </svg>
+    </button>
     <section class="swiper rounded-2xl mb-32" data-aos="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="imagens/foto1.png" class="rounded-2xl" alt="Foto 1" /></div>
@@ -264,20 +274,21 @@
     </section>
 
     <!-- Contador -->
-    <div class="about-info container mx-auto pt-32 p-4 my-32 transition-all duration-1000 ease-in-out" style="max-width:600px;">
+    <div class="about-info container mx-auto pt-32 p-4 my-32 transition-all duration-1000 ease-in-out"
+      style="max-width:600px;">
 
       <!-- Texto Introdutório -->
       <p data-aos="fade-up" data-aos-delay="200" class="text-center text-lg text-pink-200 italic mb-4">
         Esse é o tempo exato desde o instante em que meus olhos encontraram os teus pela primeira vez.
         Foi ali que tudo começou, mesmo sem a gente saber ainda.
       </p>
-    
+
       <!-- Título principal -->
       <h1 data-aos="zoom-in" data-aos-delay="400"
         class="title mb-6 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
         Juntos desde 18/07/2020
       </h1>
-    
+
       <!-- Contadores -->
       <div id="contadorCards" class="grid grid-cols-3 gap-4">
         <div data-aos="fade-up" data-aos-delay="600"
@@ -311,13 +322,13 @@
           <span class="text-sm uppercase mt-1">Segundos</span>
         </div>
       </div>
-    
+
       <!-- Subtítulo -->
       <h1 data-aos="fade-right" data-aos-delay="1200"
         class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
         Isso Equivale à
       </h1>
-    
+
       <!-- Contador Extra -->
       <div data-aos="fade-left" data-aos-delay="1300"
         class="card flex flex-col items-center bg-purple-600 text-white rounded-lg py-4 shadow-lg">
@@ -329,7 +340,7 @@
             class="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition">▶</button>
         </div>
       </div>
-    
+
       <!-- Typed Text -->
       <div data-aos="zoom-in" data-aos-delay="1400" class="my-32 card flex flex-col items-center">
         <p class="text-center text-lg text-pink-200 italic mb-4">
@@ -340,15 +351,15 @@
           Eu te <span id="typed" class="border-b-4 border-purple-300"></span>.
         </p>
       </div>
-    
+
     </div>
-    
+
     <div class="my-32" data-aos="fade-up" data-aos-delay="1500">
       <h1
         class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
         A nossa Música:</h1>
       <div class="border-shadow" style="justify-self: center;">
-        <video width="311" height="225" controls class="rounded-lg shadow-lg">
+        <video id="videoPlayer" width="311" height="225" controls class="rounded-lg shadow-lg">
           <source src="./video/HungriaAmorEFe.mp4" type="video/mp4">
           Seu navegador não suporta a reprodução de vídeos.
         </video>
@@ -505,6 +516,10 @@
 
       // Criar explosão de corações
       createParticleBurst();
+    });
+    document.getElementById('playButton').addEventListener('click', () => {
+      const video = document.getElementById('videoPlayer');
+      video.play();
     });
   </script>
 
