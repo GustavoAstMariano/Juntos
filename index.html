@@ -93,6 +93,66 @@
     .swiper-button-prev {
       color: #9b30ff;
     }
+
+    .particle {
+      position: absolute;
+      animation: fall-particle linear forwards;
+      will-change: transform, opacity;
+    }
+
+    @keyframes fall-particle {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: fall 2s ease-out forwards;
+      z-index: 999;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(45deg);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(600px) rotate(90deg);
+      }
+    }
   </style>
 </head>
 
@@ -181,8 +241,8 @@
       <span class="ml-3">Abrir Surpresa</span>
     </button>
   </div>
-  <main id="content" class="container mx-auto px-4 max-w-3xl show-content">
-    <section class="swiper rounded-2xl" data-aos="fade-up">
+  <main id="content" class="pt-20 container mx-auto px-4 max-w-3xl show-content">
+    <section class="swiper rounded-2xl mb-32" data-aos="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="imagens/foto1.png" class="rounded-2xl" alt="Foto 1" /></div>
         <div class="swiper-slide"><img src="imagens/foto2.png" class="rounded-2xl" alt="Foto 2" /></div>
@@ -199,48 +259,54 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </section>
-    <!-- Texto Typed.js -->
-    <section class="w-full flex items-center pt-2 justify-center min-h-[10vh] text-center px-4" data-aos="fade-up">
-      <p tabindex="0" class="text-3xl md:text-5xl font-semibold text-purple-700">
-        Eu te <span id="typed" class="border-b-4 border-purple-300"></span>.
-      </p>
-    </section>
-
 
     <!-- Contador -->
-    <div class="about-info container mx-auto p-4 my-32 transition-all duration-1000 ease-in-out" data-aos="fade-up"
+    <div class="about-info container mx-auto pt-32 p-4 my-32 transition-all duration-1000 ease-in-out" data-aos="fade-up"
       data-aos-delay="600" style="max-width:600px;">
-      <h1 class="title mb-6 text-2xl font-bold text-center">Juntos desde 18/07/2020</h1>
+
+      <!-- Texto Introdutório -->
+      <p class="text-center text-lg text-pink-200 italic mb-4">
+        Esse é o tempo exato desde o instante em que meus olhos encontraram os teus pela primeira vez.
+        Foi ali que tudo começou, mesmo sem a gente saber ainda.
+      </p>
+
+      <!-- Título principal com novo estilo -->
+      <h1
+        class="title mb-6 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
+        Juntos desde 18/07/2020
+      </h1>
 
       <div id="contadorCards" class="grid grid-cols-3 gap-4">
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="anos" class="text-4xl font-extrabold">0</span>
+          <span id="anos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Anos</span>
         </div>
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="meses" class="text-4xl font-extrabold">0</span>
+          <span id="meses" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Meses</span>
         </div>
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="dias" class="text-4xl font-extrabold">0</span>
+          <span id="dias" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Dias</span>
         </div>
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="horas" class="text-4xl font-extrabold">0</span>
+          <span id="horas" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Horas</span>
         </div>
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="minutos" class="text-4xl font-extrabold">0</span>
+          <span id="minutos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Minutos</span>
         </div>
         <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
-          <span id="segundos" class="text-4xl font-extrabold">0</span>
+          <span id="segundos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Segundos</span>
         </div>
       </div>
 
-      <h1 class="p-4 title mt-2 text-2xl font-bold text-center">Isso Equivale à</h1>
-      <div class=" card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+      <h1
+        class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
+        Isso Equivale à</h1>
+      <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
         <span id="contadorExtra" class="text-2xl font-semibold">0</span>
         <div class="buttons mt-4 space-x-4">
           <button onclick="alternarModo(-1)"
@@ -249,15 +315,30 @@
             class="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition">▶</button>
         </div>
       </div>
+
+      <div class="my-32 card flex flex-col items-center">
+        <p class="text-center text-lg text-pink-200 italic mb-4">
+          E é por isso que cada palavra que aparece abaixo representa só um pedacinho do que você significa pra mim.
+        </p>
+        <p tabindex="0"
+          class="title pt-4 mb- text-3xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
+          Eu te <span id="typed" class="border-b-4 border-purple-300"></span>.
+        </p>
+      </div>
     </div>
+
     <div class="my-32" data-aos="fade-up" data-aos-delay="600">
-      <h1 class="p-4 title mt-2 text-2xl font-bold text-center">A nossa Música:</h1>
+      <h1
+        class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
+        A nossa Música:</h1>
       <div style="justify-self: center;">
-        <iframe width="300" height="180" src="https://www.youtube.com/embed/iZq0u3quAqo?si=TyM5X_qFlSOM0LTb"
+        <iframe width="311" height="175" src="https://www.youtube.com/embed/iZq0u3quAqo?si=TyM5X_qFlSOM0LTb"
           title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
+    </div>
+    <div id="particles-container" class="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-50">
     </div>
   </main>
 
@@ -376,10 +457,38 @@
     }
 
     loop();
-    // Mostrar conteúdo e esconder botão ao clicar
+  </script>
+  <script>
+    const particlesContainer = document.getElementById('particles-container');
+    const emojis = ['💖', '💕', '💓', '💗', '💞'];
+
+    function createParticleBurst(quantity = 100) {
+      for (let i = 0; i < quantity; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        particle.style.left = Math.random() * 100 + 'vw';
+        particle.style.top = Math.random() * 40 + 'vh';
+        particle.style.animationDuration = (Math.random() * 2 + 2) + 's';
+        particle.style.opacity = Math.random();
+        particle.style.fontSize = (Math.random() * 24 + 16) + 'px';
+        particle.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+        particlesContainer.appendChild(particle);
+
+        setTimeout(() => {
+          particle.remove();
+        }, 4000);
+      }
+    }
+
+    // Adicione ao clique do botão
     document.getElementById('btnSurpresa').addEventListener('click', () => {
+      // Mostrar conteúdo e esconder botão
       document.getElementById('content').style.display = 'block';
       document.querySelector('.btn-container').style.display = 'none';
+
+      // Criar explosão de corações
+      createParticleBurst();
     });
   </script>
 
