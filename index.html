@@ -261,52 +261,63 @@
     </section>
 
     <!-- Contador -->
-    <div class="about-info container mx-auto pt-32 p-4 my-32 transition-all duration-1000 ease-in-out" data-aos="fade-up"
-      data-aos-delay="600" style="max-width:600px;">
+    <div class="about-info container mx-auto pt-32 p-4 my-32 transition-all duration-1000 ease-in-out" style="max-width:600px;">
 
       <!-- Texto Introdutório -->
-      <p class="text-center text-lg text-pink-200 italic mb-4">
+      <p data-aos="fade-up" data-aos-delay="200" class="text-center text-lg text-pink-200 italic mb-4">
         Esse é o tempo exato desde o instante em que meus olhos encontraram os teus pela primeira vez.
         Foi ali que tudo começou, mesmo sem a gente saber ainda.
       </p>
-
-      <!-- Título principal com novo estilo -->
-      <h1
+    
+      <!-- Título principal -->
+      <h1 data-aos="zoom-in" data-aos-delay="400"
         class="title mb-6 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
         Juntos desde 18/07/2020
       </h1>
-
+    
+      <!-- Contadores -->
       <div id="contadorCards" class="grid grid-cols-3 gap-4">
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="600"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="anos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Anos</span>
         </div>
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="700"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="meses" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Meses</span>
         </div>
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="800"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="dias" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Dias</span>
         </div>
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="900"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="horas" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Horas</span>
         </div>
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="1000"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="minutos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Minutos</span>
         </div>
-        <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        <div data-aos="fade-up" data-aos-delay="1100"
+          class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
           <span id="segundos" class="text-3xl font-extrabold">0</span>
           <span class="text-sm uppercase mt-1">Segundos</span>
         </div>
       </div>
-
-      <h1
+    
+      <!-- Subtítulo -->
+      <h1 data-aos="fade-right" data-aos-delay="1200"
         class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
-        Isso Equivale à</h1>
-      <div class="card flex flex-col items-center bg-purple-600 text-white rounded-lg p-4 shadow-lg">
+        Isso Equivale à
+      </h1>
+    
+      <!-- Contador Extra -->
+      <div data-aos="fade-left" data-aos-delay="1300"
+        class="card flex flex-col items-center bg-purple-600 text-white rounded-lg py-4 shadow-lg">
         <span id="contadorExtra" class="text-2xl font-semibold">0</span>
         <div class="buttons mt-4 space-x-4">
           <button onclick="alternarModo(-1)"
@@ -315,18 +326,20 @@
             class="px-4 py-2 bg-purple-700 text-white rounded hover:bg-purple-600 transition">▶</button>
         </div>
       </div>
-
-      <div class="my-32 card flex flex-col items-center">
+    
+      <!-- Typed Text -->
+      <div data-aos="zoom-in" data-aos-delay="1500" class="my-32 card flex flex-col items-center">
         <p class="text-center text-lg text-pink-200 italic mb-4">
           E é por isso que cada palavra que aparece abaixo representa só um pedacinho do que você significa pra mim.
         </p>
         <p tabindex="0"
-          class="title pt-4 mb- text-3xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
+          class="title pt-4 text-3xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
           Eu te <span id="typed" class="border-b-4 border-purple-300"></span>.
         </p>
       </div>
+    
     </div>
-
+    
     <div class="my-32" data-aos="fade-up" data-aos-delay="600">
       <h1
         class="title pt-4 mb-2 text-2xl font-extrabold text-center bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-500 text-transparent bg-clip-text">
